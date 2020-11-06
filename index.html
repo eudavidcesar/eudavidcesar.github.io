@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <title>module</title>
+    <style>
+        body , body * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font: normal 12pt 'Pacifico';
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div.container {
+            background-image: url(fundo.jpg);
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-position: center;
+            background-size: cover;
+            border-radius: 50px;
+            border: solid 10px rgb(226, 233, 124);
+            box-shadow: 10px 10px 10px rgb(68, 70, 49);
+        }
+        div.container > img {
+            width: 100px;
+            height: 100px;
+        }
+        div.container > h1 {
+            font: normal 20pt 'Henny Penny';
+        }
+        div.container > p {
+            font: 18pt;
+            text-align: justify;
+            width: 100%;
+            padding: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="vivi.jpg" alt="vivi">
+        <h1>Feliz Aniversário!</h1>
+        <p>Feliz aniversário digital, este site foi feito exclusivamente para Kamilly Vitória.</p>
+        <p>Por favor não tocar, direitos autorais.</p>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
