@@ -1,60 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
-    <title>module</title>
+    <title>Lucky</title>
     <style>
-        body , body * {
+        body, body * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font: normal 12pt 'Pacifico';
+            font: normal 12pt 'Helvetica';
         }
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: rgb(255,0,0);
+            background: linear-gradient(120deg, rgba(255,0,0,1) 0%, rgba(255,209,0,1) 40%, rgba(176,255,0,1) 100%);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         div.container {
-            background-image: url(fundo.jpg);
-            width: 500px;
-            height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-position: center;
-            background-size: cover;
-            border-radius: 50px;
-            border: solid 10px rgb(226, 233, 124);
-            box-shadow: 10px 10px 10px rgb(68, 70, 49);
-        }
-        div.container > img {
-            width: 100px;
-            height: 100px;
-        }
-        div.container > h1 {
-            font: normal 20pt 'Henny Penny';
-        }
-        div.container > p {
-            font: 18pt;
-            text-align: justify;
-            width: 100%;
+            margin: 20px;
             padding: 12pt;
+
+            background-color: rgba(23, 24, 23, 0.342);
+            
+        }
+        div.container div:nth-of-type(n) {
+            padding: 12pt;
+        }
+        div.container div:nth-of-type(n) > * {
+            padding: 6pt;
+            border: none;
+            line-height: 1;
+        }
+        div#roleta, div#resultado {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.formulario {
+            background-color: silver;
+        }
+
+        p.ok {
+            display: block;
+            padding: 20pt;
+            border: black solid 5px; 
+            background-color: green;
+            color: white;
+        }
+        p.next {
+            display: block;
+            padding: 20pt;
+            border: black solid 5px; 
+            background-color: orangered;
+            color: white;
+        }
+        p.and {
+            display: block;
+            padding: 20pt;
+            border: black solid 5px; 
+            background-color: red;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="vivi.jpg" alt="vivi">
-        <h1>Feliz Aniversário!</h1>
-        <p>Feliz aniversário digital, este site foi feito exclusivamente para Kamilly Vitória.</p>
-        <p>Por favor não tocar, direitos autorais.</p>
+        <div class="formulario">
+            <input type="text" name="pessoaNome" id="pessoaNome">
+            <input type="button" value="Adicionar Nome" name="adicionarNome" id="adicionarNome">
+            <div id="nomesAdicionados"></div>
+        </div>
+        <div class="roleta" id="roleta">
+            <span>Aqui aparecerá o nome sorteado....</span>
+        </div>
+        <div class="formularioRoleta">
+            <input type="button" value="Rodar a Roleta" nome="botaoSortearNomes" id="botaoSortearNomes">
+        </div>
+        <div class="resultado" id="resultado">
+            <span>Aqui vai o resultado...</span>
+        </div>
     </div>
-    <script src="app.js" type="module"></script>
+
+    <script src="./lucky.js"></script>
 </body>
 </html>
