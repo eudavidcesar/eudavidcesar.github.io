@@ -1,0 +1,65 @@
+body {
+	background: gray url("./pattern.png") repeat center center;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	padding: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+header * {
+	margin-bottom: 1.2rem;
+}
+header :last-child {
+	margin: 0;
+}
+header img {
+	width: 100px;
+}
+header h1 {
+	font-size: 2.2em;
+}
+header p {
+	font-size: 1.2em;
+}
+
+section {
+	max-width: 900px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.2rem;
+}
+section div {
+	width: 49%;
+	background: #F9F9F9;
+	border-radius: 5px;
+	border: 1px solid #d1d1d1;
+	padding: 1.2rem;
+	/* margin: 0.5rem; */
+}
+
+@media (max-width: 800px) {
+	section div {
+		width: 100%;
+	}
+}
+section h1 {
+	font-size: 2.2em;
+}
+section p {
+	font-size: 1.2em;
+}
+section * {
+	margin-bottom: 1.2rem;
+}
+section :last-child {
+	margin: 0;
+}
